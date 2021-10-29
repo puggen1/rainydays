@@ -3,3 +3,51 @@ colors for later:
 #009788
 #F68C64
 */
+body{
+    max-width: 100%;
+    margin: 0;
+}
+/* all header styling */
+header{
+    background-color: #009788;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding-top: 10px;
+    height: 81px;
+}
+header i{
+    font-size: 25px;
+    padding: 0px;
+}
+nav{
+    display: none;
+}
+.menu{
+    grid-column: 1/2;
+}
+.logo{
+    grid-column: 2/3;
+}
+.logo img{
+    height:38px;
+}
+#right-header{
+    display: flex;
+    align-items: center;
+}
+.cart{
+    margin-left: 10px;
+}
+/* collection*/
+.collection{
+    text-align: center;
+    position: relative;
+}
+.collection img{
+    max-width: 100%;
+}
+.content{
+    position: absolute;
+}

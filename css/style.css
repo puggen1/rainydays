@@ -3,51 +3,95 @@ colors for later:
 #009788
 #F68C64
 */
-body{
-    max-width: 100%;
-    margin: 0;
+body {
+  max-width: 100%;
+  margin: 0;
+}
+a {
+  background: #f68c64;
+  border: 2px solid #f68c64;
+  box-sizing: border-box;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
 }
 /* all header styling */
-header{
-    background-color: #009788;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr;
-    align-items: center;
-    justify-items: center;
-    padding-top: 10px;
-    height: 81px;
+header {
+  background-color: #009788;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  align-items: center;
+  justify-items: center;
+  padding-top: 10px;
+  height: 81px;
 }
-header i{
-    font-size: 25px;
-    padding: 0px;
+header i {
+  font-size: 25px;
+  padding: 0px;
 }
-nav{
-    display: none;
+nav {
+  display: none;
 }
-.menu{
-    grid-column: 1/2;
+.menu {
+  grid-column: 1/2;
 }
-.logo{
-    grid-column: 2/3;
+.logo {
+  grid-column: 2/3;
 }
-.logo img{
-    height:38px;
+.logo img {
+  height: 38px;
 }
-#right-header{
-    display: flex;
-    align-items: center;
+#right-header {
+  display: flex;
+  align-items: center;
 }
-.cart{
-    margin-left: 10px;
+.cart {
+  margin-left: 10px;
 }
-/* collection*/
-.collection{
-    text-align: center;
-    position: relative;
+/* collection and bestseller*/
+.collection,
+.bestseller {
+  position: relative;
 }
-.collection img{
-    max-width: 100%;
+.collection img,
+.bestseller img {
+  max-width: 100%;
 }
-.content{
-    position: absolute;
+/* splitting the content into top and bottom to give them diffrent top value*/
+.content-top,
+.content-bot {
+  position: absolute;
+  text-align: center;
+}
+.content-top {
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content-bot {
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*featured*/
+.featured {
+  display: flex;
+}
+.color-box {
+  background-color: #009788;
+}
+.text-box {
+  display: flex;
+  font-size: 1vh;
+}
+.featured img {
+  max-width: 100%;
+}
+/* temp solution */
+.featured a {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
 }

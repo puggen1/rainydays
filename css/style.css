@@ -7,6 +7,17 @@ body {
   max-width: 100%;
   margin: 0;
 }
+a,
+h1,
+h2,
+h3,
+button {
+  font-family: "Montserrat", sans-serif;
+}
+h3,
+button {
+  font-weight: 600;
+}
 a {
   background: #f68c64;
   border: 2px solid #f68c64;
@@ -16,7 +27,14 @@ a {
   text-decoration: none;
   color: white;
   padding: 5px 10px;
+  font-weight: 600;
+  font-size: 3vw;
 }
+p,
+::placeholder {
+  font-family: "source Sans Pro", sans-serif;
+}
+
 /* all header styling */
 header {
   background-color: #009788;
@@ -51,8 +69,10 @@ nav {
   margin-left: 10px;
 }
 /* collection and bestseller*/
+/* added grid on the elements to get rid of a white underline i was struggling with */
 .collection,
 .bestseller {
+  display: grid;
   position: relative;
 }
 .collection img,
@@ -67,7 +87,7 @@ nav {
   text-align: center;
 }
 .content-top {
-  top: 20%;
+  top: 17%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -76,25 +96,108 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.collection a,
+.bestseller a {
+  padding: 7px 30px;
+}
 /*featured*/
 .featured {
   display: flex;
 }
+
 .color-box {
   background-color: #009788;
+}
+.color-box h3 {
   text-align: center;
+  padding: 10px 0;
+  margin: 0;
 }
 .text-box {
   display: flex;
-  font-size: 1vh;
+  font-size: 1.5vh;
+}
+.price {
+  margin-left: 15px;
 }
 .featured img {
   max-width: 100%;
   max-height: 100%;
 }
-/* temp solution */
-.featured a {
+.box1,
+.box2 {
   display: flex;
-  text-align: center;
   flex-direction: column;
+  align-items: center;
+}
+.cta {
+  margin: 10px;
+  align-self: center;
+}
+/*about us index */
+.index-about {
+  text-align: center;
+  border-top: solid 2px #67dffb;
+  margin-top: 20px;
+}
+.index-about p {
+  padding: 5px 50px;
+}
+/* made the cta an inline-block here so it would accept margin */
+.index-about a {
+  display: inline-block;
+  margin: 10px;
+}
+/*footer*/
+footer {
+  text-align: center;
+  background-color: #009788;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "location social newsletter"
+    "location social newsletter"
+    ". copyright .";
+}
+#location {
+  grid-area: location;
+}
+#location p {
+  margin: 5px 0;
+}
+.social-media {
+  grid-area: social;
+  font-size: 3vw;
+}
+.social-media i {
+  font-size: 5vw;
+}
+.newsletter {
+  grid-area: newsletter;
+  padding: 20px 0;
+}
+#location,
+.social-media,
+.newsletter {
+  margin: auto;
+}
+#copyright {
+  grid-area: copyright;
+}
+/*for now only used on footer  will probably be a global element later*/
+form {
+  display: inline-block;
+}
+button {
+  background: #f68c64;
+  border-radius: 20px;
+  padding: 5px 20px;
+}
+input[type="email"] {
+  display: inline-block;
+  border: solid 1px #000;
+  border-radius: 5px;
+  width: 90px;
+  margin: 0 0 10px 0;
 }

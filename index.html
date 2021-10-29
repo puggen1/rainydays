@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Rainydays Homepage</title>
     <script src="https://kit.fontawesome.com/17aae2f01b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -61,9 +64,11 @@
                 </div>
                 <div class="text-box">
                     <p>Name of jacket here</p>
-                    <p>Price:240$</p>
+                    <p class="price">Price:240$</p>
                 </div>
-                <a href="#">View more</a>
+                <div class="cta">
+                    <a href="#">View more</a>
+                </div>
             </div>
             <div class="box2">
                 <div class="color-box">
@@ -72,16 +77,39 @@
                 </div>
                 <div class="text-box">
                 <p>Name of jacket here</p>
-                <p>Price:200$</p>
+                <p class="price">Price:200$</p>
                 </div>
-                <a href="#">View more</a>
+                <div class="cta">
+                    <a href="#">View more</a>
+                </div>
             </div>
         </article>
         <article class="index-about">
-
+            <h2>A Little bit about us</h2>
+            <p>We are a new and uprising
+                company that aims to be one of the 
+                main competetors in the clothing industry</p>
+            <a href="#">View More</a>
         </article>
     </main>
     <footer>
+        <div id="location">
+           <p>Find us:</p>
+             <p>Bergen,</p>
+             <p>Norway</p>
+        </div>
+        <div class="social-media">
+            <p>Visit us on social media</p>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="newsletter">
+            <form method="get" action="#">
+                <input type="email" placeholder="email">
+                <button> Join</button>
+            </form>
+        </div>
+        <p id="copyright">(C) copyright 2021</p>
 
     </footer>
     

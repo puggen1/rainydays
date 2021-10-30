@@ -160,6 +160,7 @@ nav a {
 .price {
   margin-left: 15px;
 }
+
 .featured img {
   max-width: 100%;
   max-height: 100%;
@@ -282,6 +283,7 @@ input[type="email"] {
     grid-area: nav;
   }
   nav a {
+    white-space: nowrap;
     background-color: #009788;
   }
   /*styling the nav */
@@ -356,10 +358,15 @@ input[type="email"] {
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding-bottom: 10px;
+    max-width: 100%;
   }
   .color-box {
     border-radius: 20px 20px 0 0;
+    padding: 5px;
+    max-height: 100%;
+    height: 100%;
   }
+  /*needs styling here because is not visivle on mobile */
   .box2 {
     display: flex;
     flex-direction: column;

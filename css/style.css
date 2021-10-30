@@ -35,7 +35,7 @@ p,
   font-family: "source Sans Pro", sans-serif;
 }
 ::placeholder {
-  font-size: 1.5vw;
+  font-size: 1.2vh;
 }
 
 /* all header styling */
@@ -388,7 +388,10 @@ input[type="email"] {
       ". . copyright . .";
     align-items: end;
   }
+  input[type="email"] {
+    width: 120px;
+  }
   ::placeholder {
-    font-size: 1vh;
+    font-size: 1.3vh;
   }
 }

@@ -34,6 +34,9 @@ p,
 ::placeholder {
   font-family: "source Sans Pro", sans-serif;
 }
+::placeholder {
+  font-size: 1.5vw;
+}
 
 /* all header styling */
 header {
@@ -138,6 +141,8 @@ nav a {
 /*featured*/
 .featured {
   display: flex;
+  border-bottom: solid 2px #67dffb;
+  padding-bottom: 40px;
 }
 
 .color-box {
@@ -175,8 +180,6 @@ nav a {
 /*about us index */
 .index-about {
   text-align: center;
-  border-top: solid 2px #67dffb;
-  margin-top: 20px;
 }
 .index-about p {
   padding: 5px 50px;
@@ -245,10 +248,18 @@ input[type="email"] {
 
 /*for bigger screens */
 @media screen and (min-width: 600px) {
+  /*making the a buttons more responsive on a pc with mouse */
+  a {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  a:hover {
+    background-color: #f68c64;
+  }
   p,
   a {
     font-size: 1vw;
   }
+
   /*hide mobile nav*/
   .mobilenav,
   #hamnav,
@@ -312,26 +323,65 @@ input[type="email"] {
   .bestseller {
     grid-area: best;
   }
+  /* making the image become the same size this makes collection image wrong ratio but it is not noticable here, if i find a better solution i will change */
+  .collection,
+  .bestseller {
+    max-width: 100%;
+  }
+  .collection img,
+  .bestseller img {
+    width: 100%;
+    height: 100%;
+  }
+  /* content on collection and bestseller moved */
+  .content-top {
+    top: 5%;
+  }
+  .content-bot {
+    top: 15%;
+  }
   .featured {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 150px;
-    margin: 10px 40px;
+    grid-gap: 10%;
+    /*padding on bottom already set to right number on mobile */
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 40px;
     grid-area: feat;
   }
-  .index-about {
-    grid-area: about;
-  }
-  .box1,.box2,.box3{
-    border-radius: 20px ;
+  .box1,
+  .box2,
+  .box3 {
+    border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding-bottom: 10px;
   }
-  .color-box{
+  .color-box {
     border-radius: 20px 20px 0 0;
   }
-  .box2{
+  .box2 {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  .index-about {
+    grid-area: about;
+    margin: 20px auto;
+    border-left: solid 1px #67dffb;
+    border-right: solid 1px #67dffb;
+  }
+
+  footer {
+    grid-template-columns: 0.5fr 1fr 0.5fr 1fr 0.5fr;
+    grid-template-rows: 50px auto auto;
+    grid-template-areas:
+      ". . . . ."
+      "location . social . newsletter"
+      ". . copyright . .";
+    align-items: end;
+  }
+  ::placeholder {
+    font-size: 1vh;
+  }
+}

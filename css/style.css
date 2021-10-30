@@ -256,6 +256,10 @@ input[type="email"] {
   a:hover {
     background-color: #f68c64;
   }
+  nav a:hover {
+    color: white;
+    background-color: #009788;
+  }
   p,
   a {
     font-size: 1vw;

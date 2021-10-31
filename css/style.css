@@ -164,12 +164,14 @@ nav a {
 .featured img {
   max-width: 100%;
   max-height: 100%;
+  width: 100%;
 }
 .box1,
 .box3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 100%;
 }
 .box2 {
   display: none;
@@ -241,10 +243,15 @@ button {
 }
 input[type="email"] {
   display: inline-block;
-  border: solid 1px #000;
+  border: solid 1px white;
+
   border-radius: 5px;
   width: 90px;
   margin: 0 0 10px 0;
+}
+input[type="email"]:focus {
+  outline: none;
+  border: solid 1px #000;
 }
 
 /*for bigger screens */
@@ -351,8 +358,9 @@ input[type="email"] {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10%;
     /*padding on bottom already set to right number on mobile */
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 130px;
+    padding-right: 130px;
+
     margin-top: 40px;
     grid-area: feat;
   }
@@ -364,11 +372,12 @@ input[type="email"] {
     padding-bottom: 10px;
     max-width: 100%;
   }
+
   .color-box {
     border-radius: 20px 20px 0 0;
-    padding: 5px;
     max-height: 100%;
     height: 100%;
+    width: 100%;
   }
   /*needs styling here because is not visivle on mobile */
   .box2 {

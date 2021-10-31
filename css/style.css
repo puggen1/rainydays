@@ -141,7 +141,7 @@ nav a {
 /*featured*/
 .featured {
   display: flex;
-  border-bottom: solid 2px #67dffb;
+  border-bottom: solid 1px #67dffb;
   padding-bottom: 40px;
 }
 
@@ -271,7 +271,11 @@ input[type="email"]:focus {
   a {
     font-size: 1vw;
   }
-
+  button:hover,
+  .search:hover,
+  .cart:hover {
+    cursor: pointer;
+  }
   /*hide mobile nav*/
   .mobilenav,
   #hamnav,
@@ -318,6 +322,7 @@ input[type="email"]:focus {
     border: solid 1px black;
     padding: 5px 100px 2px 5px;
   }
+
   .cart {
     margin-left: 100px;
   }

@@ -65,6 +65,7 @@ ul {
 li {
   padding: 10px 0;
 }
+/*hidden checkbox for hamburger menu */
 #hamnav {
   display: none;
 }
@@ -124,6 +125,7 @@ nav a {
   position: absolute;
   text-align: center;
 }
+/* using transform to  make text over picture stay in same spot over diffrent sizes */
 .content-top {
   top: 17%;
   left: 50%;
@@ -181,8 +183,9 @@ nav a {
   margin: 10px;
   align-self: center;
 }
-/*about us index */
-.index-about {
+/*about us index (and text align for footer)*/
+.index-about,
+footer {
   text-align: center;
 }
 .index-about p {
@@ -195,7 +198,6 @@ nav a {
 }
 /*footer*/
 footer {
-  text-align: center;
   background-color: #009788;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -255,7 +257,9 @@ input[type="email"]:focus {
   border: solid 1px #000;
 }
 
-/*for bigger screens */
+/*for bigger screens, with these two types, the site works well on smaller mobile devices,
+ and laptops to desktops. sizes in the middel(just over 600px, should have one more version
+  because some elements gets broken, i will not make tablet version here*/
 @media screen and (min-width: 600px) {
   /*making the a buttons more responsive on a pc with mouse */
   a {
@@ -364,11 +368,12 @@ input[type="email"]:focus {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10%;
     /*padding on bottom already set to right number on mobile */
+    padding-top: 40px;
     padding-left: 130px;
     padding-right: 130px;
-
     margin-top: 40px;
     grid-area: feat;
+    border-top: solid 1px #67dffb;
   }
   .box1,
   .box2,

@@ -200,7 +200,7 @@ footer {
   grid-template-areas:
     "location social newsletter"
     "location social newsletter"
-    ". copyright .";
+    ". info .";
 }
 #location {
   grid-area: location;
@@ -224,8 +224,8 @@ footer {
 .newsletter {
   margin: auto;
 }
-#copyright {
-  grid-area: copyright;
+#info {
+  grid-area: info;
 }
 /*for now only used on footer  will probably be a global element later*/
 form > * {
@@ -404,7 +404,7 @@ input[type="email"]:focus {
     grid-template-areas:
       ". . . . ."
       "location . social . newsletter"
-      ". . copyright . .";
+      ". . info . .";
     align-items: end;
   }
   input[type="email"] {
